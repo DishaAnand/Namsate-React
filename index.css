@@ -21,3 +21,20 @@
 .logo{
   width:140px;
 }
+
+.card{
+  width:200px;
+  padding: 10px;
+  margin: 10px;
+  
+  border: 1px solid black;
+}
+
+.card > img{
+  width:100%;
+}
+
+.rest{
+  display:flex;
+  flex-wrap: wrap;
+}
