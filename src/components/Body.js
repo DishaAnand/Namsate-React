@@ -2,12 +2,19 @@ import { useState } from 'react';
 import {restroList} from './config';
 import RestroCard from './RestroCard';
 
+
+function filterData(searchText,restro){
+  return restro.filter((restaurant) =>restaurant.data.name.includes(searchText))
+
+}
+
 const Body =() => {
 
   //const searchTxt = "kfc" //creating variable in js
 
-  //searchText is a local state variable
-  const  [searchText,setSearchText] = useState() //to create state variables
+  //searchText is a local state variable 
+  const  [searchText,setSearchText] = useState() //to create state variables, returns an array with first one as variable name and second is the setfunction      
+  const [restro,setrestro] = useState(restroList)
 
   return (
     <>
@@ -19,12 +26,22 @@ const Body =() => {
       }
 
       } />
-      <button className = "search-btn">Search</button>
+      <button className = "search-btn"
+        onClick={()=>{
+          //need to filter the data, passing "restro" in searchtext so that on click of search button it shld filter restro
+           const data = filterData(searchText,restro)
+           //update the state
+           setrestro(data);
+        }}
+      
+      >Search</button>
 
     </div>
     <div className = "rest">
       {
-        restroList.map((restaurant) =>{
+        //need to filter data and hence created a local variable nad put "restro" and used that in the map
+        //so that now filter can be done 
+        restro.map((restaurant) =>{
           return <  RestroCard {...restaurant.data} key = {restaurant.data.id}/>
         })
       }
