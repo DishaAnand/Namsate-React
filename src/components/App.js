@@ -11,11 +11,6 @@ import Body from "./Body";
 import Footer from "./Footer";
 
 
-//Config Driven UI
-
-
-
-
 
 // const BiryaniCafe ={
 //   name : "Biryani cafe",
