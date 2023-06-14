@@ -1,0 +1,32 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "react",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "test": "jest"
+  },
+  "repository": "git+https://github.com/DishaAnand/react.git",
+  "author": "Disha Anand",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DishaAnand/react/issues"
+  },
+  "homepage": "https://github.com/DishaAnand/react#readme",
+  "devDependencies": {
+    "@babel/core": "^7.20.12",
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "process": "^0.11.10",
+    "vite": "^4.3.3"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^4.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.11.2"
+  },
+  "browserslist": [
+    "last 2 Chrome versions"
+  ]
+}
